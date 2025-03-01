@@ -160,7 +160,7 @@ struct ContentView: View {
                             }
                         
                         if !isPathValid {
-                            Text("Invalid path. Access to this directory is blocked.")
+                            Text("Invalid path. Access to this directory is blocked. Restore at Your Own Risk.")
                                 .foregroundColor(.red)
                         }
 
@@ -178,7 +178,7 @@ struct ContentView: View {
                                 path.append("ApplyChanges")
                             }
                         }
-                        .disabled(selectedFile == nil || customFilePath.isEmpty || !isPathValid)
+                        .disabled(selectedFile == nil || customFilePath.isEmpty)
                         // .disabled(!isReady)
                     }
                 }
